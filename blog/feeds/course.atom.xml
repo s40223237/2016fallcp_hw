@@ -337,7 +337,7 @@ for i in range(6):
 ctx.closePath()
 &lt;/script&gt;
 
-&lt;/script&gt;</summary><category term="Brython"></category></entry><entry><title>week11 Brython繪圖五線譜範例-</title><link href="./week11-brythonhui-tu-wu-xian-pu-fan-li-.html" rel="alternate"></link><updated>2016-11-21T12:00:00+08:00</updated><author><name>37</name></author><id>tag:,2016-11-21:./week11-brythonhui-tu-wu-xian-pu-fan-li-.html</id><summary type="html">&lt;p&gt;Brython 繪圖
+&lt;/script&gt;</summary><category term="Brython"></category></entry><entry><title>week11 Brython繪圖五線譜範例-</title><link href="./week11-brythonhui-tu-wu-xian-pu-fan-li-.html" rel="alternate"></link><updated>2016-11-21T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-11-21:./week11-brythonhui-tu-wu-xian-pu-fan-li-.html</id><summary type="html">&lt;p&gt;Brython 繪圖
 &lt;!--PELICAN_END-SUMMARY --&gt;
 繪圖流程 導入程式庫 啟動 然後引用各種模組開始繪圖&lt;/p&gt;
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
@@ -638,31 +638,36 @@ import math
 canvas = doc["chord1"]
 ctx = canvas.getContext("2d")
 
-# 水平線
-for i in range(5):
-    ctx.beginPath()
-# 設定線的寬度為 1 個單位
-    if i == 0:
-        ctx.lineWidth = 7
-    else:
+def background(x, y, xinc, yinc, xnum, ynum, ctx):
+    # 水平線
+    for i in range(ynum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
+        if i == 0:
+            ctx.lineWidth = 7
+        else:
+            ctx.lineWidth = 1
+        ctx.moveTo(x-1, y+i*yinc)
+        ctx.lineTo(x+xnum*xinc+1, y+i*yinc)
+        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
+
+    # 垂直線
+    for i in range(xnum+1):
+        ctx.beginPath()
+    # 設定線的寬度為 1 個單位
         ctx.lineWidth = 1
-    ctx.moveTo(99, 100+i*30)
-    ctx.lineTo(201, 100+i*30)
-    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
-    ctx.strokeStyle = "blue"
-    ctx.stroke()
+        ctx.moveTo(x+i*xinc, y)
+        ctx.lineTo(x+i*xinc, y+ynum*yinc)
+        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
     ctx.closePath()
 
-# 垂直線
-for i in range(6):
-    ctx.beginPath()
-# 設定線的寬度為 1 個單位
-    ctx.lineWidth = 1
-    ctx.moveTo(100+i*20, 100)
-    ctx.lineTo(100+i*20, 220)
-    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
-    ctx.strokeStyle = "blue"
-    ctx.stroke()
-    ctx.closePath()
-ctx.closePath()
+background(300, 300, 10, 10, 5, 4, ctx)
+background(100, 300, 10, 10, 5, 4, ctx)
+background(300, 100, 10, 10, 5, 12, ctx)
 &lt;/script&gt;</summary><category term="Brython"></category></entry></feed>
