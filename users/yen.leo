@@ -14,11 +14,11 @@
 <v t="leo.20151212173315.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
 <v t="amd.20160921213353.1"><vh>2016fall 簡報與網誌樣板系統</vh></v>
-<v t="amd.20160106095324.1" a="E"><vh>@path ./../</vh>
+<v t="amd.20160106095324.1"><vh>@path ./../</vh>
 <v t="leo.20151213173830.1" a="E"><vh>假如要在近端檢視, 使用下列按鈕</vh>
 <v t="leo.20151213085727.1"><vh>@button pelican-blog</vh></v>
 </v>
-<v t="amd.20151215180106.1"><vh>設定與開發</vh>
+<v t="amd.20151215180106.1" a="E"><vh>設定與開發</vh>
 <v t="amd.20151216151325.1" a="E"><vh>@clean index.html</vh>
 <v t="amd.20161004083800.1" a="E"><vh>html</vh>
 <v t="amd.20161004083800.2"><vh>head</vh></v>
@@ -171,25 +171,16 @@
 <v t="leo.20161128134829.1"><vh>@edit 20161122.md</vh></v>
 <v t="leo.20161128140938.1"><vh>@edit 20161128.md</vh></v>
 <v t="leo.20161212141709.1"><vh>@edit 20161212.md</vh></v>
+<v t="leo.20170102150347.1"><vh>@edit 20161226.md</vh></v>
 </v>
 </v>
 </v>
 <v t="amd.20160106094754.1" a="E"><vh>@path ./../content/pages</vh>
-<v t="amd.20160106094829.1" a="E"><vh>yen 所寫的 pages 文章</vh>
-<v t="amd.20160106094844.1"><vh>@edit pages_1.md</vh></v>
-</v>
+<v t="amd.20160106094829.1"><vh>yen 所寫的 pages 文章</vh></v>
 </v>
 <v t="amd.20161004202833.1"><vh>@edit ../README.md</vh></v>
 <v t="yen.20161022111056.1"><vh>@button https server</vh></v>
 <v t="yen.20161022151749.1"><vh>產生 .key 與 .crt</vh></v>
-<v t="yen.20161105200127.1" a="E"><vh>選課人員名單</vh>
-<v t="yen.20161105200140.1"><vh>@edit a.txt</vh></v>
-<v t="yen.20161105200241.1"><vh>@edit b.txt</vh></v>
-</v>
-<v t="yen.20161105200145.1" a="E"><vh>分組名單</vh>
-<v t="yen.20161105200154.1"><vh>@edit agroup.txt</vh></v>
-<v t="yen.20161105200234.1"><vh>@edit bgroup.txt</vh></v>
-</v>
 <v t="leo.20161114162038.2" a="E"><vh>Recovered Nodes</vh>
 <v t="leo.20161114162038.3"><vh>Recovered node "封面投影片內容" from @clean index.html</vh>
 <v t="leo.20161114162038.4"><vh>old:封面投影片內容</vh></v>
@@ -1104,7 +1095,5 @@ make.start()</t>
 <t tx="yen.20161022151749.1">sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout localhost.key -out localhost.crt
 
 </t>
-<t tx="yen.20161105200127.1"></t>
-<t tx="yen.20161105200145.1"></t>
 </tnodes>
 </leo_file>
