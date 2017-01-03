@@ -53,7 +53,48 @@ def b1(e):
 document["b1"].bind("click",b1)
 &lt;/script&gt;
 
-&lt;p&gt;&lt;button id="b1"&gt;玩猜數字遊戲&lt;/button&gt;&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>計算機程式 W14</title><link href="./ji-suan-ji-cheng-shi-w14.html" rel="alternate"></link><updated>2016-12-12T13:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-12-12:./ji-suan-ji-cheng-shi-w14.html</id><summary type="html">&lt;p&gt;W14課程練習&lt;/p&gt;
+&lt;p&gt;&lt;button id="b1"&gt;玩猜數字遊戲&lt;/button&gt;&lt;/p&gt;</summary><category term="Brython"></category></entry><entry><title>W15練習-1219</title><link href="./w15lian-xi-1219.html" rel="alternate"></link><updated>2016-12-12T14:35:00+08:00</updated><author><name>37</name></author><id>tag:,2016-12-12:./w15lian-xi-1219.html</id><summary type="html">&lt;p&gt;以下為第十四週開始的程式練習，要利用&lt;a href="http://mde.tw/2016fallcp/course/Python3Programs.txt"&gt;http://mde.tw/2016fallcp/course/Python3Programs.txt&lt;/a&gt; 要整理Brython的用法。&lt;/p&gt;
+
+
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+
+&lt;script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
+
+&lt;canvas id="ex1"&gt;&lt;/div&gt;
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+container = doc['ex1']
+
+container&lt;="W14練習"
+&lt;/script&gt;
+
+
+
+&lt;canvas id="ex2"&gt;&lt;/div&gt;
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+from browser import html
+container = doc['ex2']
+mystring=input("要印出什麼字串?")
+mynum=input("要印幾次?")
+
+for i in range(int(mynum)):
+    #container&lt;="W14練習-2"+html.BR()
+    container&lt;=mystring+html.BR()
+
+
+
+&lt;/script&gt;</summary><category term="每週練習"></category></entry><entry><title>計算機程式 W14</title><link href="./ji-suan-ji-cheng-shi-w14.html" rel="alternate"></link><updated>2016-12-12T13:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-12-12:./ji-suan-ji-cheng-shi-w14.html</id><summary type="html">&lt;p&gt;W14課程練習&lt;/p&gt;
 &lt;!--PELICAN_END-SUMMARY --&gt;
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;
